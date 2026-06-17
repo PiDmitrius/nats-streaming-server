@@ -6525,7 +6525,7 @@ func TestClusteringRestoreSnapshotCreateSnapshotAfterMsgsExpired(t *testing.T) {
 		t.Fatalf("Server is stuck starting")
 	case e := <-errCh:
 		if e != nil {
-			t.Fatalf(e.Error())
+			t.Fatalf("%s", e.Error())
 		}
 	}
 }
@@ -6810,7 +6810,7 @@ func TestClusteringRestoreSnapshotMsgsBailIfNoLeader(t *testing.T) {
 		t.Fatalf("Server should have exited after a certain number of failed attempts")
 	case e := <-errCh:
 		if e != nil {
-			t.Fatalf(e.Error())
+			t.Fatalf("%s", e.Error())
 		}
 	}
 

@@ -1145,7 +1145,7 @@ func TestSubAckInboxFromOlderStore(t *testing.T) {
 	// Now wait for more than AckWait to be sure that message is not redelivered
 	select {
 	case e := <-errCh:
-		t.Fatalf(e.Error())
+		t.Fatalf("%s", e.Error())
 	case <-time.After(1500 * time.Millisecond):
 		// ok...
 	}

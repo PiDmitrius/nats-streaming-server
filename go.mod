@@ -5,24 +5,24 @@ replace github.com/armon/go-metrics => github.com/hashicorp/go-metrics v0.4.1
 go 1.25.0
 
 require (
-	github.com/go-sql-driver/mysql v1.8.1
+	github.com/go-sql-driver/mysql v1.10.0
 	github.com/gogo/protobuf v1.3.2
 	github.com/hashicorp/go-hclog v1.6.3
-	github.com/hashicorp/go-msgpack/v2 v2.1.2
-	github.com/hashicorp/raft v1.7.2
-	github.com/lib/pq v1.10.9
+	github.com/hashicorp/go-msgpack/v2 v2.1.5
+	github.com/hashicorp/raft v1.7.3
+	github.com/lib/pq v1.12.3
 	github.com/nats-io/nats-server/v2 v2.12.11
-	github.com/nats-io/nats.go v1.51.0
+	github.com/nats-io/nats.go v1.52.0
 	github.com/nats-io/nuid v1.0.1
 	github.com/nats-io/stan.go v0.10.4
-	github.com/prometheus/procfs v0.15.1
+	github.com/prometheus/procfs v0.20.1
 	go.etcd.io/bbolt v1.3.11
-	golang.org/x/crypto v0.52.0
-	golang.org/x/sys v0.45.0
+	golang.org/x/crypto v0.53.0
+	golang.org/x/sys v0.46.0
 )
 
 require (
-	filippo.io/edwards25519 v1.1.0 // indirect
+	filippo.io/edwards25519 v1.2.0 // indirect
 	github.com/antithesishq/antithesis-sdk-go v0.7.0-default-no-op // indirect
 	github.com/armon/go-metrics v0.5.4 // indirect
 	github.com/fatih/color v1.18.0 // indirect

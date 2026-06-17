@@ -174,7 +174,7 @@ func TestClientCrashAndReconnect(t *testing.T) {
 	wg.Wait()
 	select {
 	case e := <-errCh:
-		t.Fatalf(e.Error())
+		t.Fatalf("%s", e.Error())
 	default:
 	}
 

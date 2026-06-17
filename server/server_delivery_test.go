@@ -251,7 +251,7 @@ func TestDeliveryWithGapsInSequence(t *testing.T) {
 	}
 	select {
 	case e := <-errCh:
-		t.Fatalf(e.Error())
+		t.Fatalf("%s", e.Error())
 	default:
 	}
 }

@@ -185,7 +185,7 @@ func init() {
 
 func stackFatalf(t tLogger, f string, args ...interface{}) {
 	msg := fmt.Sprintf(f, args...) + "\n" + stack()
-	t.Fatalf(msg)
+	t.Fatalf("%s", msg)
 	// For staticcheck SA0511...
 	panic("unreachable code")
 }
@@ -298,7 +298,7 @@ func waitFor(t tLogger, totalWait, waitInBetween time.Duration, f func() error) 
 		time.Sleep(waitInBetween)
 	}
 	if err != nil {
-		stackFatalf(t, err.Error())
+		stackFatalf(t, "%s", err.Error())
 	}
 }
 
@@ -505,7 +505,7 @@ func runServerWithOpts(t *testing.T, sOpts *Options, nOpts *natsd.Options) *Stan
 	}
 	s, err := RunServerWithOpts(sOpts, nOpts)
 	if err != nil {
-		stackFatalf(t, err.Error())
+		stackFatalf(t, "%s", err.Error())
 	}
 	if testUseEncryption {
 		// Since the key was cleared when creating the crypto store,
